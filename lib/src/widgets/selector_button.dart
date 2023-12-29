@@ -10,7 +10,6 @@ import 'package:intl_phone_number_input/src/widgets/item.dart';
 class SelectorButton extends StatelessWidget {
   final List<Country> countries;
   final Country? country;
-  final Widget? icon;
   final SelectorConfig selectorConfig;
   final TextStyle? selectorTextStyle;
   final InputDecoration? searchBoxDecoration;
@@ -32,7 +31,6 @@ class SelectorButton extends StatelessWidget {
     required this.locale,
     required this.onCountryChanged,
     required this.isEnabled,
-    this.icon,
     required this.isScrollControlled,
   }) : super(key: key);
 
@@ -43,7 +41,7 @@ class SelectorButton extends StatelessWidget {
             ? DropdownButtonHideUnderline(
                 child: DropdownButton<Country>(
                   key: Key(TestHelper.DropdownButtonKeyValue),
-                  icon: icon,
+                  icon: selectorConfig.dropdownIcon,
                   hint: Item(
                     country: country,
                     showFlag: selectorConfig.showFlags,
