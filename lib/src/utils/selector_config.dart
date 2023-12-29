@@ -36,10 +36,14 @@ class SelectorConfig {
   /// Use safe area for selectorType=BOTTOM_SHEET
   final bool useBottomSheetSafeArea;
 
+  /// Use safe area for selectorDropdown icon
+  final Widget? dropdownIcon;
+
   const SelectorConfig({
     this.selectorType = PhoneInputSelectorType.DROPDOWN,
     this.showFlags = true,
     this.useEmoji = false,
+    this.dropdownIcon,
     this.countryComparator,
     this.setSelectorButtonAsPrefixIcon = false,
     this.leadingPadding,
